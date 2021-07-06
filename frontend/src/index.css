@@ -1,0 +1,74 @@
+@import url("https://fonts.googleapis.com/css2?family=Oswald:wght@200;700&display=swap");
+
+.App {
+  font-family: "Oswald", sans-serif;
+  text-align: center;
+}
+#CenterToDo{
+  display: flex;
+  justify-content: center;
+}
+#ToDo {
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  font-family: "Oswald", sans-serif;
+  width: 20rem;
+  height: auto;
+  border: 0.05rem rgb(179, 179, 179) solid;
+  border-radius: 1rem;
+}
+#ToDo form {
+  width: auto;
+  height: auto;
+  padding: 1rem;
+}
+#ToDo form input[type="text"] {
+  height: 2rem;
+  padding: 0.05rem;
+  margin: 1rem;
+  font-size: 1rem;
+  color: black;
+  border: 0;
+  outline: 0;
+  border-bottom: 1px solid black;
+}
+#ToDo form input[type="submit"] {
+  height: 2.3rem;
+  width: 3.3rem;
+  border: 1px solid black;
+  background-color: white;
+  border-radius: 0.5rem;
+  transition: 0.3s;
+}
+#ToDo form input[type="submit"]:hover {
+  background-color: #00ff00;
+  border: 1px solid white;
+  color: white;
+}
+
+#ToDo ul {
+  text-align: start;
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+}
+
+
+#ToDo ul li button{
+  width: auto;
+  padding: 0.5rem;
+  height: auto;
+  margin: 0.5rem;
+  background-color: rgb(255, 255, 0);
+  border-radius: 0.5rem;
+  transition: 0.3s;
+  border: none;
+  outline: 0;
+}
+
+#ToDo ul li button:hover {
+  background-color: red;
+  color: white;
+  text-decoration: line-through;
+}

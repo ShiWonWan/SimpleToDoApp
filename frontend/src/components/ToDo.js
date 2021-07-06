@@ -40,33 +40,33 @@ export const ToDo = () => {
     });
     getTask()
   }
-  
+
 
   useEffect(() => {
     getTask()
   }, [])
 
-    return (
-      <div id="CenterToDo">
-        <div id="ToDo">
-        <form onSubmit={newTask}> 
-          <input type="text" placeholder="Add new Task" name="task" 
-          vale = {dato}
-          onChange = {event => setDato(event.target.value)}
-          autoFocus
+  return (
+    <div id="CenterToDo">
+      <div id="ToDo">
+        <form onSubmit={newTask}>
+          <input type="text" placeholder="Add new Task" name="task"
+            vale={dato}
+            onChange={event => setDato(event.target.value)}
+            autoFocus
           />
           <input type="submit" value="Add" />
         </form>
         <ul>
-          {task.map(item => {
-            if (item.state === 0)
+          {task.filter(item => item.state === 0)
+            .map(item => {
               return <li key={item.id}>
-                  <button value={item.id} onClick={event => completeTask(event.target.value)}>{item.task}</button>
-                </li>
+                <button value={item.id} onClick={event => completeTask(event.target.value)}>{item.task}</button>
+              </li>
             })}
         </ul>
       </div>
-      </div>
-      
-    );
-  };
+    </div>
+
+  );
+};
